@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"
+    integrity="sha512-Tn2m0TIpgVyTzzvmxLNuqbSJH3JP8jm+Cy3hvHrW7ndTDcJ1w5mBiksqDBb8GpE2ksktFvDB/ykZ0mDpsZj20w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="icon" href="https://s2.coinmarketcap.com/static/img/coins/64x64/6636.png" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+  <script src="https://widgets.coingecko.com/coingecko-coin-price-marquee-widget.js"></script>
+  <coingecko-coin-price-marquee-widget coin-ids="bitcoin,ethereum,eos,ripple,litecoin" currency="usd"
+    background-color="#000" font-color="#fff" locale="en"></coingecko-coin-price-marquee-widget>
+  <div
+    style="height: 33px; background-color: #1D2330; overflow:hidden; box-sizing: border-box; text-align: right; line-height:14px; font-size: 12px; font-feature-settings: normal; text-size-adjust: 100%; padding:1px;padding: 0px; margin: 0px; width: 100%;">
+    <div style="height:40px; padding:0px; margin:0px; width: 100%;"><iframe
+        src="https://widget.coinlib.io/widget?type=horizontal_v2&theme=dark&pref_coin_id=1505&invert_hover=no"
+        width="100%" height="36px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0"
+        style="border:0;margin:0;padding:0;"></iframe></div>
+  </div>
+  <title>BlockBoard - Explorer</title>
+</head>
+
+<body>
+  <header class="container pt-4">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand" href="#">BlockBoard</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" style="border: none;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40">
+          <path d="M18 18V20H6V18H18ZM21 11V13H3V11H21ZM18 4V6H6V4H18Z" fill="rgba(255,255,255,1)"></path>
+        </svg>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Transactions <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Explorer</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Gas Fee Estimate</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">NFT & Collections</a>
+          </li>
+        </ul>
+        <form class="form-inline ml-auto">
+          <div class="input-group">
+            <select class="protocol-opt form-control text-white" aria-label="protocol-name"
+              aria-describedby="basic-addon1">
+              <option value="bitcoin">Bitcoin</option>
+              <option value="bitcoincash">Bitcoin Cash</option>
+              <option value="dogecoin">Dogecoin</option>
+              <option value="ethereum">Ethereum</option>
+              <option value="litecoin">Litecoin</option>
+              <option value="polkadot">Polkadot</option>
+              <option value="tezos">Tezos</option>
+            </select>
+            <div class="input-group-append"></div>
+            <button class="protocol-btn" id="basic-addon1">Change Protocol</button>
+          </div>
+        </form>
+      </div>
+    </nav>
+  </header>
+  <main class="pb-5">
+    <div class="search-sec py-4">
+      <div class="container-fluid">
+        <h3 class="text-center text-white mb-3">Explore Bitcoin Blockchain</h3>
+        <div class="row">
+          <div class="col-md-2"></div>
+          <div class="col-md-8">
+            <form>
+              <div class="flex-holder">
+                <div class="search-input">
+                  <input type="text" placeholder="Search by Address / Txn Hash / Block"
+                    class="form-control custom-search">
+                </div>
+                <div>
+                  <button type="submit" class="input-group-text custom-search px-3">Search</button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-2"></div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row mt-4 mb-3 align-items-center justify-content-between">
+        <div class="col-md-12 mb-3">
+          <div class="row align-items-center">
+            <div class="col-md-12">
+              <div class="card text-white" style="background: #0f172a;">
+                <div class="card-body text-center">
+                  <h4 style="line-height: 1.5;">Track your transactions and assets in one place across multiple
+                    blockchains, not all over the
+                    place.</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 text-center mx-3 mb-3 p-3" style="border: 1px solid #ffc107; border-radius: 15px;">
+          <script src="https://widgets.coingecko.com/coingecko-coin-ticker-widget.js"></script>
+          <coingecko-coin-ticker-widget coin-id="bitcoin" background-color="#000" currency="usd" locale="en">
+          </coingecko-coin-ticker-widget>
+        </div>
+        <div class="col-md-5 mb-3 text-center cus-border" style="height: 300px; overflow-y: scroll;">
+          <script async src="https://static.coinstats.app/widgets/coin-chart-widget.js"></script>
+          <coin-stats-chart-widget type="large" coin-id="bitcoin" width="700" chart-height="300" currency="EUR"
+            locale="en" bg-color="#000" text-color="#FFFFFF" status-up-color="#74D492" status-down-color="#FE4747"
+            buttons-color="#1C1B1B" chart-color="#FFA959" chart-gradient-from="rgba(255,255,255,0.07)"
+            chart-gradient-to="rgba(0,0,0,0)" chart-label-background="#000000"
+            candle-grids-color="rgba(255,255,255,0.1)" border-color="#6DD400" font="Roboto, Arial, Helvetica"
+            btc-color="#6DD400" eth-color="#67B5FF"></coin-stats-chart-widget>
+        </div>
+        <div class="col-md-3 mx-3 pb-3 text-center" style="border: 1px solid #075eff; border-radius: 15px;">
+          <script src="https://widgets.coingecko.com/coingecko-coin-heatmap-widget.js"></script>
+          <coingecko-coin-heatmap-widget background-color="#000" height="270" locale="en">
+          </coingecko-coin-heatmap-widget>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-md-6 mb-3">
+          <div class="card card-tab pb-3">
+            <div class="card-body">
+              <div class="d-flex justify-content-between">
+                <h6 class="mb-5 text-info">Bitcoin Latest Block Transactions</h6>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="card cus-tl text-white mb-2">
+                    <div class="card-body">
+                      <div class="mic-txt tab-res tran-card">
+                        <span>
+                          <i class="fas fa-cube"></i>
+                        </span>
+                        <p>Block<br />786270</p>
+                        <p>Txn <br /> <a href="#" class="text-info">d474e2...617f5b</a></p>
+                        <p>Age: <br /> <span class="text-warning">32 minutes</span></p>
+                        <p class="text-success">completed</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card cus-tl text-white mb-2">
+                    <div class="card-body">
+                      <div class="mic-txt tab-res tran-card">
+                        <span>
+                          <i class="fas fa-cube"></i>
+                        </span>
+                        <p>Block<br />786270</p>
+                        <p>Txn <br /> <a href="#" class="text-info">2b4ce6...1f768f</a></p>
+                        <p>Age: <br /> <span class="text-warning">32 minutes</span></p>
+                        <p class="text-success">completed</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card cus-tl text-white mb-2">
+                    <div class="card-body">
+                      <div class="mic-txt tab-res tran-card">
+                        <span>
+                          <i class="fas fa-cube"></i>
+                        </span>
+                        <p>Block<br />786270</p>
+                        <p>Txn <br /> <a href="#" class="text-info">1e5aad...30f110</a></p>
+                        <p>Age: <br /> <span class="text-warning">32 minutes</span></p>
+                        <p class="text-success">completed</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card cus-tl text-white mb-2">
+                    <div class="card-body">
+                      <div class="mic-txt tab-res tran-card">
+                        <span>
+                          <i class="fas fa-cube"></i>
+                        </span>
+                        <p>Block<br />786270</p>
+                        <p>Txn <br /> <a href="#" class="text-info">a64c1a...28af73</a></p>
+                        <p>Age: <br /> <span class="text-warning">32 minutes</span></p>
+                        <p class="text-success">completed</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card cus-tl text-white mb-2">
+                    <div class="card-body">
+                      <div class="mic-txt tab-res tran-card">
+                        <span>
+                          <i class="fas fa-cube"></i>
+                        </span>
+                        <p>Block<br />786270</p>
+                        <p>Txn <br /> <a href="#" class="text-info">856a71...d5113f</a></p>
+                        <p>Age: <br /> <span class="text-warning">32 minutes</span></p>
+                        <p class="text-success">completed</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card cus-tl text-white mb-2">
+                    <div class="card-body">
+                      <div class="mic-txt tab-res tran-card">
+                        <span>
+                          <i class="fas fa-cube"></i>
+                        </span>
+                        <p>Block<br />786270</p>
+                        <p>Txn <br /> <a href="#" class="text-info">8dc675...b91ae4</a></p>
+                        <p>Age: <br /> <span class="text-warning">32 minutes</span></p>
+                        <p class="text-success">completed</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card cus-tl text-white mb-2">
+                    <div class="card-body">
+                      <div class="mic-txt tab-res tran-card">
+                        <span>
+                          <i class="fas fa-cube"></i>
+                        </span>
+                        <p>Block<br />786270</p>
+                        <p>Txn <br /> <a href="#" class="text-info">da34b9...7f543e</a></p>
+                        <p>Age: <br /> <span class="text-warning">32 minutes</span></p>
+                        <p class="text-success">completed</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card card-tab pb-3">
+            <div class="card-body">
+              <div class="d-flex justify-content-between">
+                <h6 class="mb-5 text-info">Bitcoin Blocks Identifiers</h6>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="card cus-tl text-white mb-2">
+                    <div class="card-body">
+                      <div class="mic-txt tab-res tran-card">
+                        <span>
+                          <i class="fas fa-cube"></i>
+                        </span>
+                        <p>ID:<br />000000 ... eb6048</p>
+                        <p>Parent ID: <br /> 000000 ... 8ce26f</p>
+                        <p>Age: <br /> <span class="text-warning">14 years ago</span></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card cus-tl text-white mb-2">
+                    <div class="card-body">
+                      <div class="mic-txt tab-res tran-card">
+                        <span>
+                          <i class="fas fa-cube"></i>
+                        </span>
+                        <p>ID:<br />000000 ... 99ddbd</p>
+                        <p>Parent ID: <br />000000 ... eb6048</p>
+                        <p>Age: <br /> <span class="text-warning">14 years ago</span></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card cus-tl text-white mb-2">
+                    <div class="card-body">
+                      <div class="mic-txt tab-res tran-card">
+                        <span>
+                          <i class="fas fa-cube"></i>
+                        </span>
+                        <p>ID:<br />000000 ... 464449</p>
+                        <p>Parent ID: <br />000000 ... 99ddbd</p>
+                        <p>Age: <br /> <span class="text-warning">14 years ago</span></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card cus-tl text-white mb-2">
+                    <div class="card-body">
+                      <div class="mic-txt tab-res tran-card">
+                        <span>
+                          <i class="fas fa-cube"></i>
+                        </span>
+                        <p>ID:<br />000000 ... 4a1485</p>
+                        <p>Parent ID: <br />000000 ... 464449</p>
+                        <p>Age: <br /> <span class="text-warning">14 years ago</span></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card cus-tl text-white mb-2">
+                    <div class="card-body">
+                      <div class="mic-txt tab-res tran-card">
+                        <span>
+                          <i class="fas fa-cube"></i>
+                        </span>
+                        <p>ID:<br />000000 ... f533fc</p>
+                        <p>Parent ID: <br />000000 ... 4a1485</p>
+                        <p>Age: <br /> <span class="text-warning">14 years ago</span></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card cus-tl text-white mb-2">
+                    <div class="card-body">
+                      <div class="mic-txt tab-res tran-card">
+                        <span>
+                          <i class="fas fa-cube"></i>
+                        </span>
+                        <p>ID:<br />000000 ... 8f778d</p>
+                        <p>Parent ID: <br />000000 ... f533fc</p>
+                        <p>Age: <br /> <span class="text-warning">14 years ago</span></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card cus-tl text-white mb-2">
+                    <div class="card-body">
+                      <div class="mic-txt tab-res tran-card">
+                        <span>
+                          <i class="fas fa-cube"></i>
+                        </span>
+                        <p>ID:<br />000000 ... c89444</p>
+                        <p>Parent ID: <br />000000 ... 8f778d</p>
+                        <p>Age: <br /> <span class="text-warning">14 years ago</span></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+</html>

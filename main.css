@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #000000 !important;
+  color: #fff !important;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+  color: #fff !important;
+}
+
+.navbar-brand {
+  font-size: 24px !important;
+  font-weight: 700;
+}
+
+.nav-link {
+  font-size: 10px;
+}
+
+.protocol-opt {
+  background: #232530 !important;
+  color: #fff;
+  border: 1px solid #232530 !important;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  padding: 6px 12px;
+  font-size: 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+.protocol-opt:focus {
+  outline: none;
+  border: none;
+  box-shadow: 0px 0px 1px 2.5px rgba(53, 77, 156, 0.75);
+}
+
+.protocol-btn {
+  border: none;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  padding: 6px 12px;
+  font-size: 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+.protocol-btn:focus {
+  box-shadow: 0px 0px 1px 2.5px rgba(118, 119, 121, 0.75);
+}
+
+.protocol-btn:hover {
+  background: #5a6268;
+  color: #fff !important;
+}
+
+.search-sec {
+  background: #0f172a;
+}
+
+.flex-holder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-input {
+  flex: 1;
+}
+
+input[placeholder] {
+  font-size: 14px;
+}
+
+.custom-search {
+  height: 80px !important;
+  background-color: #000 !important;
+  border-radius: 0 !important;
+  color: #fff !important;
+}
+
+.cus-border::-webkit-scrollbar {
+  width: 6px;
+}
+
+.cus-border::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.cus-border::-webkit-scrollbar-thumb {
+  background: #232530;
+  border-radius: 50px;
+}
+.cus-border::-webkit-scrollbar-thumb:hover {
+  background: #5a6268;
+}
+
+.cus-border {
+  /* border: 1px solid green !important; */
+}
+
+.card-tab {
+  background: #171923 !important;
+}
+
+.cus-tl {
+  background: #000 !important;
+  border: none !important;
+}
+
+.card-body {
+  padding: 8px !important;
+}
+
+.tab-res {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.mic-txt {
+  font-size: 12px;
+}
+
+.tran-card {
+  display: flex;
+  justify-content: space-between;
+}
